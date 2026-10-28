@@ -1,0 +1,611 @@
+{
+  "name": "hookproof",
+  "version": "1.0.0",
+  "category": "webhook-tooling",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated webhook and callback security skills: signature scheme identification, replay and tolerance auditing, delivery-rejection verification, outbound target safety and secret rotation, with a endpoint-config-to-verification-plan CLI.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "callback-authorization-boundary",
+      "title": "Callback Authorization Boundary",
+      "path": "skills/callback-authorization-boundary/SKILL.md",
+      "tags": [
+        "scope",
+        "authorization",
+        "rules-of-engagement"
+      ],
+      "meta_phase": "scope",
+      "sha256": "bb1e8de9c294ecf117568eb5c52cd1406fc0ce5687ba2adefc59ff66b6b5275c"
+    },
+    {
+      "slug": "webhook-endpoint-inventory",
+      "title": "Webhook Endpoint Inventory",
+      "path": "skills/webhook-endpoint-inventory/SKILL.md",
+      "tags": [
+        "scope",
+        "inventory",
+        "webhooks"
+      ],
+      "meta_phase": "scope",
+      "sha256": "9bbd73bbe42c3e037f66f1f57e7df1713b8a025fd52a7cb1fb8b0fbd649c186c"
+    },
+    {
+      "slug": "secret-inventory-and-ownership",
+      "title": "Secret Inventory and Ownership",
+      "path": "skills/secret-inventory-and-ownership/SKILL.md",
+      "tags": [
+        "scope",
+        "secrets",
+        "rotation"
+      ],
+      "meta_phase": "scope",
+      "sha256": "c505c32651b3cb037fcfd89312fb967495a7784cb669003bf72eab092431d1ba"
+    },
+    {
+      "slug": "outbound-target-scope-classification",
+      "title": "Outbound Target Scope Classification",
+      "path": "skills/outbound-target-scope-classification/SKILL.md",
+      "tags": [
+        "scope",
+        "ssrf",
+        "outbound"
+      ],
+      "meta_phase": "scope",
+      "sha256": "536d55f1fd69d37f4dbcc37b6342ddb1732efa15589612a2caa57ccd54734519"
+    },
+    {
+      "slug": "synthetic-event-only-policy",
+      "title": "Synthetic Event Only Policy",
+      "path": "skills/synthetic-event-only-policy/SKILL.md",
+      "tags": [
+        "scope",
+        "data-handling",
+        "privacy"
+      ],
+      "meta_phase": "scope",
+      "sha256": "a0e7e85699b5cdc1ea2858ba8fbbdf6c09994e8975c6dc28fa313d6f29180b45"
+    },
+    {
+      "slug": "delivery-volume-and-rate-budget",
+      "title": "Delivery Volume and Rate Budget",
+      "path": "skills/delivery-volume-and-rate-budget/SKILL.md",
+      "tags": [
+        "scope",
+        "rate-limit",
+        "operations"
+      ],
+      "meta_phase": "scope",
+      "sha256": "cfacb3be36c1166f8cab8877ad96b83993ac437dbeaec376bc967ed9eec4e4ef"
+    },
+    {
+      "slug": "provider-terms-and-testing-mode",
+      "title": "Provider Terms and Testing Mode",
+      "path": "skills/provider-terms-and-testing-mode/SKILL.md",
+      "tags": [
+        "scope",
+        "provider",
+        "sandbox"
+      ],
+      "meta_phase": "scope",
+      "sha256": "c5e56a9e17f74e600ab1b5f1b3f84c6e38afe1d00fcc836abf71f62e4e88b069"
+    },
+    {
+      "slug": "signature-scheme-identification",
+      "title": "Signature Scheme Identification",
+      "path": "skills/signature-scheme-identification/SKILL.md",
+      "tags": [
+        "identify",
+        "signature",
+        "scheme"
+      ],
+      "meta_phase": "identify",
+      "sha256": "6af7cfbdbafe74644f29321fa0d3f66fff60e729f1499c6c6ad3e0b9f73cea90"
+    },
+    {
+      "slug": "canonical-string-construction-audit",
+      "title": "Canonical String Construction Audit",
+      "path": "skills/canonical-string-construction-audit/SKILL.md",
+      "tags": [
+        "identify",
+        "canonicalization",
+        "signature"
+      ],
+      "meta_phase": "identify",
+      "sha256": "14f7d5c01d92349de3ad947eabe01fe1f1b861eee31931a016584ff2c66f89da"
+    },
+    {
+      "slug": "signature-header-vocabulary-mapping",
+      "title": "Signature Header Vocabulary Mapping",
+      "path": "skills/signature-header-vocabulary-mapping/SKILL.md",
+      "tags": [
+        "identify",
+        "headers",
+        "trust"
+      ],
+      "meta_phase": "identify",
+      "sha256": "dd9847f41c3b741c24ea4fc27e9f4c7b93330e8882a4b6836d5e1247e5aa6e84"
+    },
+    {
+      "slug": "timestamp-and-tolerance-format-audit",
+      "title": "Timestamp and Tolerance Format Audit",
+      "path": "skills/timestamp-and-tolerance-format-audit/SKILL.md",
+      "tags": [
+        "identify",
+        "timestamp",
+        "replay"
+      ],
+      "meta_phase": "identify",
+      "sha256": "8965f27d90e5bf3bf1da05a68bbff5df24d399022000a7fdcf41bd717aff2e6c"
+    },
+    {
+      "slug": "raw-body-versus-decoded-body",
+      "title": "Raw Body Versus Decoded Body",
+      "path": "skills/raw-body-versus-decoded-body/SKILL.md",
+      "tags": [
+        "identify",
+        "parsing",
+        "signature"
+      ],
+      "meta_phase": "identify",
+      "sha256": "b411d559820b6b11644d986397ca37ebef722a3ab4cc9c556c43786ba989be2e"
+    },
+    {
+      "slug": "delivery-envelope-taxonomy",
+      "title": "Delivery Envelope Taxonomy",
+      "path": "skills/delivery-envelope-taxonomy/SKILL.md",
+      "tags": [
+        "identify",
+        "content-type",
+        "parsing"
+      ],
+      "meta_phase": "identify",
+      "sha256": "0f1d3f229d9cb12cbd83390590faac58648e97fcb9cc6ec0b90483a54e636ab5"
+    },
+    {
+      "slug": "delivery-metadata-header-trust",
+      "title": "Delivery Metadata Header Trust",
+      "path": "skills/delivery-metadata-header-trust/SKILL.md",
+      "tags": [
+        "identify",
+        "routing",
+        "trust"
+      ],
+      "meta_phase": "identify",
+      "sha256": "e79e8ab8ed083802e03bcbf4759c8cd039c63ebdddc28959ac057e171195dc13"
+    },
+    {
+      "slug": "rejection-and-error-shape-mapping",
+      "title": "Rejection and Error Shape Mapping",
+      "path": "skills/rejection-and-error-shape-mapping/SKILL.md",
+      "tags": [
+        "identify",
+        "errors",
+        "responses"
+      ],
+      "meta_phase": "identify",
+      "sha256": "67fbacb6c8969fd0e6e211c471d57c524f546ee2c92f801fa16430f7928a18d9"
+    },
+    {
+      "slug": "unsigned-delivery-acceptance",
+      "title": "Unsigned Delivery Acceptance",
+      "path": "skills/unsigned-delivery-acceptance/SKILL.md",
+      "tags": [
+        "probe",
+        "signature",
+        "baseline"
+      ],
+      "meta_phase": "probe",
+      "sha256": "aef277f81810fe7bd6c3a71a57794395ffe1018f7ddf406790e77cf381131ecb"
+    },
+    {
+      "slug": "signature-header-removal-and-blanking",
+      "title": "Signature Header Removal and Blanking",
+      "path": "skills/signature-header-removal-and-blanking/SKILL.md",
+      "tags": [
+        "probe",
+        "headers",
+        "signature"
+      ],
+      "meta_phase": "probe",
+      "sha256": "289946cb9016ba8b0e7b79b7a6dbb0bc97cf22774c73e6d66ce7cb40ab21aab7"
+    },
+    {
+      "slug": "malformed-signature-rejection",
+      "title": "Malformed Signature Rejection",
+      "path": "skills/malformed-signature-rejection/SKILL.md",
+      "tags": [
+        "probe",
+        "parsing",
+        "signature"
+      ],
+      "meta_phase": "probe",
+      "sha256": "9a3b8a49e9aadaf4a55c2835f7583b69303d9c654f0c9abd5d1fd66cbb54e07c"
+    },
+    {
+      "slug": "truncated-signature-acceptance",
+      "title": "Truncated Signature Acceptance",
+      "path": "skills/truncated-signature-acceptance/SKILL.md",
+      "tags": [
+        "probe",
+        "signature",
+        "comparison"
+      ],
+      "meta_phase": "probe",
+      "sha256": "b6011a51536f467cd97c67a93e31d6a108012a626fb6a702ead0b81efa837232"
+    },
+    {
+      "slug": "stale-timestamp-rejection",
+      "title": "Stale Timestamp Rejection",
+      "path": "skills/stale-timestamp-rejection/SKILL.md",
+      "tags": [
+        "probe",
+        "timestamp",
+        "replay"
+      ],
+      "meta_phase": "probe",
+      "sha256": "80f2236616c4a0a1c88c6ed9002bfd8193a8403da4e185637369280e891b8e1a"
+    },
+    {
+      "slug": "future-timestamp-rejection",
+      "title": "Future Timestamp Rejection",
+      "path": "skills/future-timestamp-rejection/SKILL.md",
+      "tags": [
+        "probe",
+        "timestamp",
+        "replay"
+      ],
+      "meta_phase": "probe",
+      "sha256": "8e6960553890fdfc24765b2cad4ca4457265098003c06f8e72c30fb181850b44"
+    },
+    {
+      "slug": "algorithm-and-version-confusion",
+      "title": "Algorithm and Version Confusion",
+      "path": "skills/algorithm-and-version-confusion/SKILL.md",
+      "tags": [
+        "probe",
+        "signature",
+        "algorithm"
+      ],
+      "meta_phase": "probe",
+      "sha256": "0c32ae5c1a57d49a3ddbabc3f191da57a3ac6eb328dce661a0a9c02e590b81ab"
+    },
+    {
+      "slug": "canonical-mismatch-acceptance",
+      "title": "Canonical Mismatch Acceptance",
+      "path": "skills/canonical-mismatch-acceptance/SKILL.md",
+      "tags": [
+        "probe",
+        "canonicalization",
+        "integrity"
+      ],
+      "meta_phase": "probe",
+      "sha256": "8ee51c9c47399a131f32c80c7f5a74b8c4d785a9641e9190be8744d42dbd2f10"
+    },
+    {
+      "slug": "content-encoding-parsing-mismatch",
+      "title": "Content-Encoding Parsing Mismatch",
+      "path": "skills/content-encoding-parsing-mismatch/SKILL.md",
+      "tags": [
+        "probe",
+        "encoding",
+        "parsing"
+      ],
+      "meta_phase": "probe",
+      "sha256": "efbeb2f42b00e3b02e1697616e9989018ef9f11ed19a3f1d39e70f22b5f0ccfc"
+    },
+    {
+      "slug": "signature-over-query-parameters",
+      "title": "Signature Over Query Parameters",
+      "path": "skills/signature-over-query-parameters/SKILL.md",
+      "tags": [
+        "probe",
+        "routing",
+        "signature"
+      ],
+      "meta_phase": "probe",
+      "sha256": "ac7566ba050a96da232ed64f62dfee376548ebdcd441ec4be4e91219a749c0a4"
+    },
+    {
+      "slug": "secret-comparison-timing",
+      "title": "Secret Comparison Timing",
+      "path": "skills/secret-comparison-timing/SKILL.md",
+      "tags": [
+        "probe",
+        "timing",
+        "cryptography"
+      ],
+      "meta_phase": "probe",
+      "sha256": "9d3e4c16c31cefe70d27caefc8b2ae793d12c5a0a6769ab8dc517b4d4444534e"
+    },
+    {
+      "slug": "duplicate-delivery-idempotency",
+      "title": "Duplicate Delivery Idempotency",
+      "path": "skills/duplicate-delivery-idempotency/SKILL.md",
+      "tags": [
+        "probe",
+        "idempotency",
+        "replay"
+      ],
+      "meta_phase": "probe",
+      "sha256": "f1bddc2e746575b2a7ea6e63af3ca8822534d0310ffb2c6833b88182c5a2e1ad"
+    },
+    {
+      "slug": "rejection-response-detail-leakage",
+      "title": "Rejection Response Detail Leakage",
+      "path": "skills/rejection-response-detail-leakage/SKILL.md",
+      "tags": [
+        "probe",
+        "errors",
+        "information-disclosure"
+      ],
+      "meta_phase": "probe",
+      "sha256": "a44af209ffb0bc1bdedf2902be18765fcf62fd49d0fd0e2e025ea7225f1b8176"
+    },
+    {
+      "slug": "content-type-parsing-confusion",
+      "title": "Content-Type Parsing Confusion",
+      "path": "skills/content-type-parsing-confusion/SKILL.md",
+      "tags": [
+        "probe",
+        "content-type",
+        "parsing"
+      ],
+      "meta_phase": "probe",
+      "sha256": "53810091897f9333b646b8b09f389957acd648d577e91549d1b634926fcf5e7a"
+    },
+    {
+      "slug": "batch-envelope-partial-signature",
+      "title": "Batch Envelope Partial Signature",
+      "path": "skills/batch-envelope-partial-signature/SKILL.md",
+      "tags": [
+        "probe",
+        "batch",
+        "integrity"
+      ],
+      "meta_phase": "probe",
+      "sha256": "f62ce385add62f22b09f20249d9bb651ccfe7e06fd1df9f45198bff93c9806c0"
+    },
+    {
+      "slug": "outbound-target-scheme-validation",
+      "title": "Outbound Target Scheme Validation",
+      "path": "skills/outbound-target-scheme-validation/SKILL.md",
+      "tags": [
+        "probe",
+        "ssrf",
+        "outbound"
+      ],
+      "meta_phase": "probe",
+      "sha256": "f50af59dee039d9a4c47d4f53af4b9529434f1ccf558c29054168db28c4d604e"
+    },
+    {
+      "slug": "redirect-following-on-outbound-fetch",
+      "title": "Redirect Following on Outbound Fetch",
+      "path": "skills/redirect-following-on-outbound-fetch/SKILL.md",
+      "tags": [
+        "probe",
+        "ssrf",
+        "redirects"
+      ],
+      "meta_phase": "probe",
+      "sha256": "ab9aed86bba951a7f4968367eabeae2ef3e64cdcb3a2268eb748bab35541495b"
+    },
+    {
+      "slug": "retry-semantics-and-amplification",
+      "title": "Retry Semantics and Amplification",
+      "path": "skills/retry-semantics-and-amplification/SKILL.md",
+      "tags": [
+        "probe",
+        "retries",
+        "operations"
+      ],
+      "meta_phase": "probe",
+      "sha256": "74507559edf2f4577a0c0379638a53c516f0f3dea78267c779744af33c521022"
+    },
+    {
+      "slug": "clean-session-reproduction-recipe",
+      "title": "Clean Session Reproduction Recipe",
+      "path": "skills/clean-session-reproduction-recipe/SKILL.md",
+      "tags": [
+        "confirm",
+        "reproduction",
+        "evidence"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "b5daef0a1454adbf2e415c9f9e547f9887a34539cebaa69ddd170c09bd7e9dbc"
+    },
+    {
+      "slug": "sandbox-reproduction-with-provider-tool",
+      "title": "Sandbox Reproduction With Provider Tool",
+      "path": "skills/sandbox-reproduction-with-provider-tool/SKILL.md",
+      "tags": [
+        "confirm",
+        "provider",
+        "sandbox"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "4bcb7ccf74960b0c1dee0b17c7a903c7f24e94ed3990d3daf4c372a12c418fe7"
+    },
+    {
+      "slug": "rejection-evidence-capture",
+      "title": "Rejection Evidence Capture",
+      "path": "skills/rejection-evidence-capture/SKILL.md",
+      "tags": [
+        "confirm",
+        "evidence",
+        "rejection"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "f54ade8a10e8a2449cd79680968be0e7dd4ba61ecb4e517f2c53e957f203ba83"
+    },
+    {
+      "slug": "timing-sample-collection-rigor",
+      "title": "Timing Sample Collection Rigor",
+      "path": "skills/timing-sample-collection-rigor/SKILL.md",
+      "tags": [
+        "confirm",
+        "timing",
+        "method"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "a36056cc15075b43446b2f403aaea460c1a0878beb26ab097b1d6a1e59539293"
+    },
+    {
+      "slug": "retry-amplification-confirmation",
+      "title": "Retry Amplification Confirmation",
+      "path": "skills/retry-amplification-confirmation/SKILL.md",
+      "tags": [
+        "confirm",
+        "retries",
+        "operations"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "bd716d6a963dc57cfaa2e2b51c082241e598501720ba2736381f2b6ab15ef118"
+    },
+    {
+      "slug": "impact-boundary-statement",
+      "title": "Impact Boundary Statement",
+      "path": "skills/impact-boundary-statement/SKILL.md",
+      "tags": [
+        "confirm",
+        "impact",
+        "severity"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "e68e24dc9e640987d5cc9ee59fb0b8546b42c5bd45b3e33a66f0c53cff6070ec"
+    },
+    {
+      "slug": "raw-buffer-verification-ordering",
+      "title": "Raw Buffer Verification Ordering",
+      "path": "skills/raw-buffer-verification-ordering/SKILL.md",
+      "tags": [
+        "harden",
+        "parsing",
+        "signature"
+      ],
+      "meta_phase": "harden",
+      "sha256": "4158780cf80d37edd64665414530d7c0d2f8b40f9c07c4ae64c7d87c44f2aacf"
+    },
+    {
+      "slug": "constant-time-comparison-enforcement",
+      "title": "Constant-Time Comparison Enforcement",
+      "path": "skills/constant-time-comparison-enforcement/SKILL.md",
+      "tags": [
+        "harden",
+        "cryptography",
+        "timing"
+      ],
+      "meta_phase": "harden",
+      "sha256": "ef284a25cb71021bc6cb6a63a4d66e3af01c9f995c3bbb3b44d51f839c1e97d6"
+    },
+    {
+      "slug": "tolerance-window-bounding",
+      "title": "Tolerance Window Bounding",
+      "path": "skills/tolerance-window-bounding/SKILL.md",
+      "tags": [
+        "harden",
+        "timestamp",
+        "replay"
+      ],
+      "meta_phase": "harden",
+      "sha256": "ccad8facb9d43fa38554c4d3fd0febf4fa54102eb85da1091348c39a5c00d73e"
+    },
+    {
+      "slug": "replay-store-and-dedup-implementation",
+      "title": "Replay Store and Dedup Implementation",
+      "path": "skills/replay-store-and-dedup-implementation/SKILL.md",
+      "tags": [
+        "harden",
+        "idempotency",
+        "replay"
+      ],
+      "meta_phase": "harden",
+      "sha256": "f04a983192b4d60f9ad6135fa8a8401521259ca85a40a90c3150c4a02661bfc5"
+    },
+    {
+      "slug": "uniform-rejection-response",
+      "title": "Uniform Rejection Response",
+      "path": "skills/uniform-rejection-response/SKILL.md",
+      "tags": [
+        "harden",
+        "errors",
+        "disclosure"
+      ],
+      "meta_phase": "harden",
+      "sha256": "7548cca8081a4d22d46d67b69f7c4f0f21b596929395910f6af02318ceb4c654"
+    },
+    {
+      "slug": "outbound-target-allowlist-and-egress-control",
+      "title": "Outbound Target Allowlist and Egress Control",
+      "path": "skills/outbound-target-allowlist-and-egress-control/SKILL.md",
+      "tags": [
+        "harden",
+        "ssrf",
+        "outbound"
+      ],
+      "meta_phase": "harden",
+      "sha256": "27ea581458ec916378fb8361682535e4ecee87ec47b1a5f6c54b2c2a47fbcf69"
+    },
+    {
+      "slug": "dual-secret-rotation-with-overlap",
+      "title": "Dual Secret Rotation With Overlap",
+      "path": "skills/dual-secret-rotation-with-overlap/SKILL.md",
+      "tags": [
+        "harden",
+        "secrets",
+        "rotation"
+      ],
+      "meta_phase": "harden",
+      "sha256": "cbf16c7b20cc0e40d14b8c6b818093b5fb3f664bb49eed8a790ae203042bb9c4"
+    },
+    {
+      "slug": "webhook-finding-evidence-pack",
+      "title": "Webhook Finding Evidence Pack",
+      "path": "skills/webhook-finding-evidence-pack/SKILL.md",
+      "tags": [
+        "document",
+        "evidence",
+        "reporting"
+      ],
+      "meta_phase": "document",
+      "sha256": "3439e288ccd569686d61844d765722656f6bbf62689238802ec29fd67e65c385"
+    },
+    {
+      "slug": "scheme-aware-remediation-wording",
+      "title": "Scheme-Aware Remediation Wording",
+      "path": "skills/scheme-aware-remediation-wording/SKILL.md",
+      "tags": [
+        "document",
+        "remediation",
+        "communication"
+      ],
+      "meta_phase": "document",
+      "sha256": "2aee94685a0b106b9d139f18c777a69e850242dd21fabf71ef58459465e8bae3"
+    },
+    {
+      "slug": "provider-coordinated-disclosure",
+      "title": "Provider Coordinated Disclosure",
+      "path": "skills/provider-coordinated-disclosure/SKILL.md",
+      "tags": [
+        "document",
+        "disclosure",
+        "coordination"
+      ],
+      "meta_phase": "document",
+      "sha256": "406977b3e2d0270a5ea57cc24dfaa2b909a5f5d6bcb843dd8e2981b1932ca731"
+    },
+    {
+      "slug": "coverage-gap-and-skip-register",
+      "title": "Coverage Gap and Skip Register",
+      "path": "skills/coverage-gap-and-skip-register/SKILL.md",
+      "tags": [
+        "document",
+        "coverage",
+        "reporting"
+      ],
+      "meta_phase": "document",
+      "sha256": "c7539051096458b4c6ad61e84b08afe09d1d1f316cf541b174160089d8615476"
+    }
+  ]
+}

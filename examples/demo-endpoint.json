@@ -1,0 +1,18 @@
+{
+  "target": "payments receiver",
+  "scheme": "hmac-sha256 over <timestamp>.<raw body>",
+  "endpoints": ["/hooks/stripe", "/hooks/github"],
+  "signature_headers": ["stripe-signature", "x-hub-signature-256"],
+  "providers": ["stripe", "github"],
+  "content_types": ["application/json"],
+  "observed": {
+    "tolerance_seconds": 300,
+    "dedup_key": "event id from unsigned header",
+    "rejection_status": 500
+  },
+  "concerns": [
+    "does the handler verify the raw buffer before parsing",
+    "is the replay window enforced in both directions",
+    "are outbound callback targets restricted before the request"
+  ]
+}
